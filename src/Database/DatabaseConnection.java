@@ -1,49 +1,56 @@
 package Database;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DatabaseConnection {
-    Statement statement;
-    Connection con;
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/Loneria?&useSSL=false&serverTimezone=UTC";
+    private static final String USER = "root";
+    private static final String PASSWORD = "Gonza+-Vera115935";
 
-    public Statement coo()  {
-        return statement;
-    }
+    private Connection connection;
 
-    public Connection cc() {
-        return con;
-    }
-
-    public void conectar() throws SQLException {
-        String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/Loneria?&useSSL=false&serverTimezone=UTC";
-        String user = "root";
-        String password = "Gonza+-Vera115935";
+    public DatabaseConnection() {
 
         try {
-            Class.forName(driver);
+            Class.forName(DRIVER);
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
 
-            con = DriverManager.getConnection(url, user, password);
-            /*if (!con.isClosed()) {
-                System.out.println("[MySQL] Connected Database");
-            }*/
+            // consulta SELECT * FROM "nombre para saber si esta conectandose de manera exitosa"
+            String query = "SELECT * FROM nombre";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
 
-            statement = con.createStatement();
-            System.out.println("Conexion Establecida");
 
-        } catch (SQLException | ClassNotFoundException ex) {
-            throw new RuntimeException(ex);
+            while (resultSet.next()) {
+                String nombre = resultSet.getString("nombre");
+
+                //imprime por consola la informacion de la tabla
+                System.out.println("Columna 1: " + nombre);
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
         }
     }
 
     public Connection getConnection() {
-        return con;
+        return connection;
     }
-    public boolean isDatabaseConnected() {
+
+    public void closeConnection() {
         try {
-            return con != null && !con.isClosed();
+            if (connection != null) {
+                connection.close();
+            }
         } catch (SQLException e) {
-            return false;
+            e.printStackTrace();
         }
     }
 }

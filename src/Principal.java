@@ -1,4 +1,7 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class Principal {
     private JPanel panelPrincipal;
@@ -6,6 +9,18 @@ public class Principal {
     private JButton modificarButton;
     private JButton eliminarButton;
     private JTable table1;
+
+
+    public Principal() {
+
+        agregarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AgregarCliente AC = new AgregarCliente();
+                AC.setVisible(true);
+            }
+        });
+    }
 
     public static void main(String[] args) {
             JFrame frame = new JFrame("Login");
