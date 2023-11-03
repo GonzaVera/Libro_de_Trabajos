@@ -29,31 +29,30 @@ public class AgregarCliente {
                 //declaro las variables que voy a usar
 
                 String nombre, apellido, telefono, direccion, descripcion, dni;
-
                 nombre = textField1.getText();
                 apellido = textField2.getText();
                 telefono = textField3.getText();
                 direccion = textField4.getText();
                 descripcion = textField5.getText();
                 dni = textField6.getText();
-            //este if lo que hace es validar que el campo dni no supere los 8 digitos si lo hace salta un MessageDialog marcando el error (dentro del try este if no funciona)
 
                 if (dni.length() != 8 || !dni.matches("\\d{8}")) {
                     JOptionPane.showMessageDialog(null, "El DNI no es válido. Debe contener exactamente 8 dígitos.");
                 } else {
-
                     try {
-                        dbOperaciones.insertNombre(nombre);
-                        dbOperaciones.insertApellido(apellido);
-                        dbOperaciones.insertTelefono(telefono);
-                        dbOperaciones.insertDireccion(direccion);
-                        dbOperaciones.insertDescripcion(descripcion);
-                        dbOperaciones.insertDNI(dni);
-
+                        dbOperaciones.insertCliente(nombre, apellido, telefono, direccion, descripcion, dni);
                     } catch (SQLException ex) {
                         ex.printStackTrace();
+                    } finally {
+                        dbOperaciones.closeConnection();
                     }
                 }
+                textField1.setText("");
+                textField2.setText("");
+                textField3.setText("");
+                textField4.setText("");
+                textField5.setText("");
+                textField6.setText("");
             }
         });
         cancelarButton.addActionListener(new ActionListener() {
@@ -67,7 +66,7 @@ public class AgregarCliente {
     }
 
     public void setVisible(boolean b) {
-        JFrame frame = new JFrame("Administrable");
+        JFrame frame = new JFrame("Agregarcliente");
         frame.setContentPane(new AgregarCliente().panelAgregar);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();

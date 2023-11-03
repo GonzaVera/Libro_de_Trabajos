@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e2daf7b-ac48-42ec-a0f2-e7bcdeb7b554" name="Changes" comment="Mejoras con la conexion de la base de datos.">
-      <change afterPath="$PROJECT_DIR$/src/OperacionesDB.java" afterDir="false" />
+    <list default="true" id="5e2daf7b-ac48-42ec-a0f2-e7bcdeb7b554" name="Changes" comment="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando">
+      <change afterPath="$PROJECT_DIR$/src/BuscarCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AgregarCliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgregarCliente.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AgregarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgregarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/Connect.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OperacionesDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperacionesDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Principal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +27,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GonzaVera&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d8389d1d-c8ac-4ab5-b9fd-d2b9c0d52e6b" />
+        <option name="url" value="https://github.com/GonzaVera/Libro_de_Trabajos.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -110,7 +124,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696714770226</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando">
+      <option name="closed" value="true" />
+      <created>1698090473080</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698090473080</updated>
+    </task>
+    <task id="LOCAL-00003" summary="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando">
+      <option name="closed" value="true" />
+      <created>1698090729598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698090729598</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,7 +156,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de vistas y trabajando en la conexion con la base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion de vistas y trabajando en la conexion con la base de datos" />
+    <MESSAGE value="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -134,6 +165,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
+          <option name="timeStamp" value="4" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
