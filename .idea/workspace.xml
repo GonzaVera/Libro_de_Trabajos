@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e2daf7b-ac48-42ec-a0f2-e7bcdeb7b554" name="Changes" comment="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando">
-      <change afterPath="$PROJECT_DIR$/src/BuscarCliente.java" afterDir="false" />
+    <list default="true" id="5e2daf7b-ac48-42ec-a0f2-e7bcdeb7b554" name="Changes" comment="Commit final modificacion de BD y eliminacion de campo modificar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AgregarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgregarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OperacionesDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperacionesDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Principal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
     </list>
@@ -140,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698090729598</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit final modificacion de BD y eliminacion de campo modificar">
+      <option name="closed" value="true" />
+      <created>1698983462130</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698983462130</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +161,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de vistas y trabajando en la conexion con la base de datos" />
     <MESSAGE value="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="La conexion a la base de datos funciona correctamente, imprime algunos elementos de la base de datos para corroborar que esta funcionando, cree una clase que se llama OperacionesDB.java para poder simplificar un poco el codigo de AgregarCliente.java que ya esta listo y funcionando" />
+    <MESSAGE value="Commit final modificacion de BD y eliminacion de campo modificar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit final modificacion de BD y eliminacion de campo modificar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -26,7 +26,7 @@ public class AgregarCliente {
         agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //declaro las variables que voy a usar
+
 
                 String nombre, apellido, telefono, direccion, descripcion, dni;
                 nombre = textField1.getText();
@@ -36,6 +36,7 @@ public class AgregarCliente {
                 descripcion = textField5.getText();
                 dni = textField6.getText();
 
+                //verifica que el DNI no supere los 8 digitos y si lo hace muestra mensaje de error
                 if (dni.length() != 8 || !dni.matches("\\d{8}")) {
                     JOptionPane.showMessageDialog(null, "El DNI no es válido. Debe contener exactamente 8 dígitos.");
                 } else {
